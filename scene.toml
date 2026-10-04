@@ -1,0 +1,25 @@
+# Work cell around the arm. Metres and degrees, in the robot base frame:
+# origin at the centre of the base mounting face, z up, x where J1 = 0 points.
+# Edit, then press "Reload scene" in plan_gui.py. To see these axes (x red, y green, z blue) and box
+# labels, open viser's settings menu and turn on "guides" in the scene tree. The GUI also
+# shows the tool tip position live: touch the tip to a corner of the table or wall and read it off.
+#
+# Each [[box]]: size = full length along x, y, z; center = middle of the box;
+# yaw = optional turn about the vertical axis through the centre, applied after size.
+# A table top level with the base mounting face has center z = -thickness / 2.
+
+[tool]
+# Suction gripper on the flange, modelled as a cylinder along the flange z axis.
+length = 0.09
+radius = 0.03
+
+[[box]]
+name = "table"
+size = [1.2, 0.725, 0.05]
+center = [0.4862, 0.2487, -0.025]
+
+[[box]]
+name = "wall"
+size = [0.05, 4.0, 1.5]
+center = [0, -0.3302, 0.75]
+yaw = 90.0
