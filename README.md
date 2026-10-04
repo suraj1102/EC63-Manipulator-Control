@@ -31,8 +31,8 @@ Communication to the robot occurs over two TCP ports:
 
 | Port | Direction | Format | Use |
 |---|---|---|---|
-| 8055 | Mac -> robot | JSON-RPC, one JSON object per line | Commands and queries |
-| 8056 | Robot -> Mac | Binary packet every 8 ms | Live state: joints, pose, mode, I/O |
+| 8055 | Device -> robot | JSON-RPC, one JSON object per line | Commands and queries |
+| 8056 | Robot -> device | Binary packet every 8 ms | Live state: joints, pose, mode, I/O |
 
 A command looks like this:
 
